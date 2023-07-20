@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct HasContactsView: View {
+    var contacts: [Person]
     var body: some View {
-        Text("Has Contacts - Stub")
+        List {
+            ForEach(contacts) { contact in
+                Contact(person: contact)
+            }
+        }
     }
 }

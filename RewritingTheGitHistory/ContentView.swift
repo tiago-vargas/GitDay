@@ -14,7 +14,7 @@ struct ContentView: View {
         if contacts.isEmpty {
             NoContactsView()
         } else {
-            HasContactsView()
+            HasContactsView(contacts: contacts)
         }
     }
 }
@@ -30,5 +30,16 @@ struct ContentView_Previews: PreviewProvider {
 
     static var previews: some View {
         ContentView(contacts: contacts)
+    }
+}
+
+struct Contact: View {
+    let person: Person
+
+    var body: some View {
+        VStack {
+            Label("Fulano", systemImage: "person")
+        }
+        .padding()
     }
 }
