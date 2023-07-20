@@ -8,19 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    var contacts: [Person] = []
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        if contacts.isEmpty {
+            NoContactsView()
+        } else {
+            HasContactsView()
         }
-        .padding()
     }
 }
 
+struct Person: Identifiable {
+    let id = UUID()
+    let name: String
+}
+
 struct ContentView_Previews: PreviewProvider {
+//    static var contacts: [Person] = []
+    static var contacts: [Person] = [Person(name: "Fulano"), Person(name: "Deltrano")]
+
     static var previews: some View {
-        ContentView()
+        ContentView(contacts: contacts)
     }
 }
