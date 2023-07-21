@@ -13,6 +13,7 @@
 		1D5BBFB82A69D037000D7366 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D5BBFB72A69D037000D7366 /* Preview Assets.xcassets */; };
 		1D5BBFBF2A69E81F000D7366 /* NoContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BBFBE2A69E81F000D7366 /* NoContactsView.swift */; };
 		1D5BBFC12A69E842000D7366 /* HasContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BBFC02A69E842000D7366 /* HasContactsView.swift */; };
+		1DD483AC2A6B2B94004EAB52 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD483AB2A6B2B94004EAB52 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1D5BBFB72A69D037000D7366 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D5BBFBE2A69E81F000D7366 /* NoContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContactsView.swift; sourceTree = "<group>"; };
 		1D5BBFC02A69E842000D7366 /* HasContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasContactsView.swift; sourceTree = "<group>"; };
+		1DD483AB2A6B2B94004EAB52 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				1D5BBFB02A69D036000D7366 /* RewritingTheGitHistoryApp.swift */,
 				1D5BBFB22A69D036000D7366 /* ContentView.swift */,
+				1DD483AB2A6B2B94004EAB52 /* ViewModel.swift */,
 				1D5BBFB42A69D037000D7366 /* Assets.xcassets */,
 				1D5BBFB62A69D037000D7366 /* Preview Content */,
 				1D5BBFBE2A69E81F000D7366 /* NoContactsView.swift */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD483AC2A6B2B94004EAB52 /* ViewModel.swift in Sources */,
 				1D5BBFBF2A69E81F000D7366 /* NoContactsView.swift in Sources */,
 				1D5BBFB32A69D036000D7366 /* ContentView.swift in Sources */,
 				1D5BBFC12A69E842000D7366 /* HasContactsView.swift in Sources */,

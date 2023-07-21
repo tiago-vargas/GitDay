@@ -8,27 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    var contacts: [Person] = []
+    @StateObject var viewModel = ViewModel()
 
     var body: some View {
         NavigationView {
-            Group {
-                if contacts.isEmpty {
-                    NoContactsView()
-                } else {
-                    HasContactsView(contacts: contacts)
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
+            viewModel.buildContactsView()
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
 
-                    } label: {
-                        Image(systemName: "plus.circle.fill")
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(.blue)
-                    }
+                } label: {
+                    Image(systemName: "plus.circle.fill")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(.blue)
                 }
             }
         }
@@ -41,11 +35,8 @@ struct Person: Identifiable {
 }
 
 struct ContentView_Previews: PreviewProvider {
-//    static var contacts: [Person] = []
-    static var contacts: [Person] = [Person(name: "Fulano"), Person(name: "Deltrano")]
-
     static var previews: some View {
-        ContentView(contacts: contacts)
+        ContentView()
     }
 }
 
