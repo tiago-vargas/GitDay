@@ -10,6 +10,8 @@ import SwiftUI
 class ViewModel: ObservableObject {
     @Published var contacts: [Person] = []
     //    @Published var contacts: [Person] = [Person(name: "Fulano"), Person(name: "Deltrano")]
-    
+    func addPerson(){
+        contacts.append(Person(name: "Caio"))
+    }
 }
 
