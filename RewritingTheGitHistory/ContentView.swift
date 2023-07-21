@@ -11,10 +11,26 @@ struct ContentView: View {
     var contacts: [Person] = []
 
     var body: some View {
-        if contacts.isEmpty {
-            NoContactsView()
-        } else {
-            HasContactsView(contacts: contacts)
+        NavigationView {
+            Group {
+                if contacts.isEmpty {
+                    NoContactsView()
+                } else {
+                    HasContactsView(contacts: contacts)
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.blue)
+                    }
+                }
+            }
         }
     }
 }
