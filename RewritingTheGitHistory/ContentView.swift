@@ -4,25 +4,25 @@
 //
 //  Created by Tiago Vargas on 20/07/23.
 //
-
+ 
 import SwiftUI
 
 struct ContentView: View {
-    var contacts: [Person] = []
+    @StateObject var viewModel: ViewModel = ViewModel()
 
     var body: some View {
         NavigationView {
             Group {
-                if contacts.isEmpty {
+                if viewModel.contacts.isEmpty {
                     NoContactsView()
                 } else {
-                    HasContactsView(contacts: contacts)
+                    HasContactsView(contacts: viewModel.contacts)
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-
+                        viewModel.addPerson()
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .resizable()
@@ -41,11 +41,8 @@ struct Person: Identifiable {
 }
 
 struct ContentView_Previews: PreviewProvider {
-//    static var contacts: [Person] = []
-    static var contacts: [Person] = [Person(name: "Fulano"), Person(name: "Deltrano")]
-
     static var previews: some View {
-        ContentView(contacts: contacts)
+        ContentView()
     }
 }
 
