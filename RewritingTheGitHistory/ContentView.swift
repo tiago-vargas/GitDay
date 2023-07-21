@@ -22,7 +22,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-
+                        viewModel.addPerson()
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .resizable()
