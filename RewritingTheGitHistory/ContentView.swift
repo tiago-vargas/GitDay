@@ -13,11 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Group {
-                if viewModel.contacts.isEmpty {
-                    NoContactsView()
-                } else {
-                    HasContactsView(contacts: viewModel.contacts)
-                }
+                viewModel.buildContactsView()
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

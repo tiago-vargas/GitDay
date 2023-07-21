@@ -13,5 +13,13 @@ class ViewModel: ObservableObject {
     func addPerson(){
         contacts.append(Person(name: "Caio"))
     }
+    func buildContactsView() -> some View {
+        return Group {
+            if contacts.isEmpty {
+                NoContactsView()
+            } else {
+                HasContactsView(contacts: contacts)
+            }
+        }
+    }
 }
-
