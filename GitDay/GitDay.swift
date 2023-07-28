@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct RewritingTheGitHistoryApp: App {
+struct GitDay: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
